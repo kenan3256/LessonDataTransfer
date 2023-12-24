@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LessonDataTransfer</string>
+    <string name="add_new_prodact">Add new Prodact</string>
+    <string name="hint_code">Code</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_descriptin">Description</string>
+    <string name="add_button">Add Prodact </string>
+
+</resources>

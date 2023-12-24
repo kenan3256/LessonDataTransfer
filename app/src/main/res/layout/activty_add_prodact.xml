@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+<variable
+    name="viewModel"
+    type="com.kenanhaciyev.lessondatatransfer.features.newproduct.AddProdactViewModul" />
+
+    </data>
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark">
+
+   <EditText
+       android:id="@+id/edtProdactcode"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:hint="@string/hint_code"
+       android:text="@={viewModel.prodactCode}"
+       />
+
+
+
+    <EditText
+        android:id="@+id/edtProdactname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtProdactcode"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/hint_name"
+        android:text="@={viewModel.prodactName}"/>
+
+
+
+
+    <EditText
+        android:id="@+id/edtProdactdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtProdactname"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/hint_descriptin"
+        android:text="@={viewModel.prodactDescription}"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtProdactdescription"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
