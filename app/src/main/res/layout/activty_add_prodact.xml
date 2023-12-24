@@ -59,7 +59,9 @@
         android:layout_height="wrap_content"
         android:text="@string/add_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtProdactdescription"/>
+        app:layout_constraintTop_toBottomOf="@id/edtProdactdescription"
+        android:onClick="@{()->viewModel.onNewProdactInsert()}"
+        />
 
 
 

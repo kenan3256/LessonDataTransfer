@@ -1,9 +1,11 @@
 package com.kenanhaciyev.lesson03mydatatransfer.features.newproduct
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.kenanhaciyev.lesson03mydatatransfer.model.Prodact
 import com.kenanhaciyev.lessondatatransfer.features.newproduct.AddProdactViewModul
 import com.kenanhaciyev.lessondatatransfer.databinding.ActivtyAddProdactBinding
 
@@ -21,15 +23,27 @@ class AddProdactActivity: AppCompatActivity() {
         binding= ActivtyAddProdactBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.viewModel= viewModul
+        binding.lifecycleOwner=this
+
+
     }
 
     fun observerAll(){
         viewModul.newProdactCallback.observe(this){
+            val intent= Intent()
+
+           val prodact=Prodact(10, "alca", "turs")
+
+            intent.putExtra("prodact",prodact)
+            setResult(RESULT_OK, intent)
+
+            finish()
 
         }
         viewModul.errorDescription.observe(this){
              if (!it.isNullOrEmpty()){
-                 Toast(baseContext).show()
+                 Toast.makeText(this, it,Toast.LENGTH_LONG).show()
              }
         }
     }
