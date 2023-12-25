@@ -15,7 +15,8 @@ val newProdactCallback=MutableLiveData<Boolean>()
         if (prodactCode.value.isNullOrEmpty()
             || prodactName.value.isNullOrEmpty()
             || prodactDescription.value.isNullOrEmpty()  ){
-            errorDescription.postValue("Dutun melumatlari doldurun")
+            errorDescription.postValue(
+                "Melumatlar duzgun doldurulmayib. Butun melumatlarin dolduruldugundan emin olun")
             return
         }
 newProdactCallback.postValue(true)
