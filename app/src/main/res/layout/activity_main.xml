@@ -17,6 +17,7 @@
     tools:context="com.kenanhaciyev.lesson03mydatatransfer.features.productlist.MainActivity">
 
     <Button
+        android:id="@+id/btn_add_new_prodact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_new_prodact"
@@ -27,6 +28,15 @@
         android:onClick="@{()->viewModel.onAddnewProdact()}">
 
     </Button>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_new_prodact"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

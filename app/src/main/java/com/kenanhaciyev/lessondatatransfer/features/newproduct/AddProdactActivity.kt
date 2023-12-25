@@ -33,7 +33,8 @@ class AddProdactActivity: AppCompatActivity() {
         viewModul.newProdactCallback.observe(this){
             val intent= Intent()
 
-           val prodact=Prodact(10, "alca", "turs")
+         val prodact=Prodact(10, "alca", "turs")
+
 
             intent.putExtra("prodact",prodact)
             setResult(RESULT_OK, intent)
@@ -49,7 +50,7 @@ class AddProdactActivity: AppCompatActivity() {
     }
     fun removeAll(){
         viewModul.newProdactCallback.removeObservers(this)
-        viewModul.errorDescription.removeObservers(this)
+
     }
 
     override fun onResume() {

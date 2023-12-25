@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     fun removeObserver(){
         viewModul.addProdactObserver.removeObservers(this)
-     //   viewModul.addProdactObserver.postValue(false)
+         viewModul.addProdactObserver.postValue(false)
     }
 
     fun observerAll(){
