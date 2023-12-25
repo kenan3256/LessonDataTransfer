@@ -12,6 +12,7 @@ import com.kenanhaciyev.lesson03mydatatransfer.model.Prodact
 import com.kenanhaciyev.lessondatatransfer.features.productlist.MainActivtyViewModul
 
 import com.kenanhaciyev.lessondatatransfer.databinding.ActivityMainBinding
+import com.kenanhaciyev.lessondatatransfer.features.addapters.ProdactListAdapter
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -26,7 +27,14 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner=this
         binding.viewModel=viewModul
         setContentView(binding.root)
+
+        val adapter=ProdactListAdapter(this.baseContext, mutableListOf())
+        binding.prodactListView.adapter=adapter
+
     }
+
+
+
 
     fun openAddProdactActivity(){
         val intent = Intent(this,AddProdactActivity::class.java)
